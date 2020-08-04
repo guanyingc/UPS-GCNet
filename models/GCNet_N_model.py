@@ -41,7 +41,7 @@ class GCNetNModel(GCNetModel):
         self.Normal_Net = self.import_network(args.Normal_Net_name)(opt, 6)
         self.Normal_Net = model_utils.init_net(self.Normal_Net, gpu_ids=args.gpu_ids)
 
-        if self.is_train: # Criterion
+        if self.is_train:
             self.normal_crit = model_utils.NormalCrit(opt, log)
             self.optimizer = torch.optim.Adam(self.Normal_Net.parameters(), lr=args.init_lr, betas=(args.beta_1, args.beta_2))
             self.optimizers.append(self.optimizer)
@@ -101,18 +101,8 @@ class GCNetNModel(GCNetModel):
     def prepare_visual(self):
         visuals = []
         visuals += GCNetModel.prepare_visual(self)
-        #data, pred = self.data, self.pred
-        #if self.opt['s2_est_n']:
-        #    _, error_map = eval_utils.cal_normal_acc(data['normal'].detach(), pred['normal'].detach(), data['mask'].detach())
-        #    pred_n = (pred['normal'].detach() + 1) / 2
-        #    masked_pred = pred_n * data['mask'].detach().expand_as(pred['normal'].detach())
-        #    visuals += [masked_pred, error_map['angular_map']]
         return visuals
 
     def save_visual_detail(self, log, split, epoch, obj_path, obj_names):
         GCNetModel.save_visual_detail(self, log, split, epoch, obj_path, obj_names)
         save_dir = log.config_save_detail_dir(split, epoch)
-        #data, pred = self.data, self.pred
-        #if self.opt['s2_est_n']:
-        #    normal = pred['normal'].data * data['mask'].data.expand_as(pred['normal'].data)
-        #    log.save_normal_mat(normal, obj_names, save_dir)

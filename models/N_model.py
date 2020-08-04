@@ -30,7 +30,7 @@ class NModel(LModel):
         self.N_Net = self.import_network(args.N_Net_name)(opt, 6)
         self.N_Net = model_utils.init_net(self.N_Net, gpu_ids=args.gpu_ids)
 
-        if self.is_train: # Criterion
+        if self.is_train:
             self.normal_crit = model_utils.NormalCrit(opt, log)
             self.optimizer = torch.optim.Adam(self.N_Net.parameters(), lr=args.init_lr, betas=(args.beta_1, args.beta_2))
             self.optimizers.append(self.optimizer)

@@ -54,7 +54,7 @@ class GCNetModel(LModel):
             self.set_requires_grad(L_Net1, requires_grad=False)
             self.set_requires_grad(N_Net, requires_grad=False)
 
-        if self.is_train: # Criterion
+        if self.is_train:
             self.dir_crit = model_utils.DirectionCrit(opt, log) 
             self.int_crit = model_utils.IntensityCrit(opt, log)
             parameters = filter(lambda p: p.requires_grad, self.GCNet.parameters())
@@ -120,15 +120,6 @@ class GCNetModel(LModel):
         records, iter_res = LModel.prepare_records(self)
 
         data, pred = self.data, self.pred
-        #if 'prev_dirs' in pred:
-        #    prev_l_acc, _ = eval_utils.cal_dirs_acc(data['dirs'].detach(), pred['prev_dirs'].detach())
-        #    records['p_l_err_mean'] = prev_l_acc['l_err_mean']
-        #    iter_res.append(prev_l_acc['l_err_mean'])
-
-        #if 'prev_intens' in pred:
-        #    prev_int_acc, _ = eval_utils.cal_ints_acc(data['ints'].detach(), pred['prev_intens'].detach())
-        #    records['p_ints_ratio'] = prev_int_acc['ints_ratio']
-        #    iter_res.append(prev_int_acc['ints_ratio'])
 
         if ('prev_normal' in pred) and (data['normal'].shape == pred['prev_normal'].shape):
             n_acc, _ = eval_utils.cal_normal_acc(data['normal'].detach(), pred['prev_normal'].detach(), data['mask'].detach())

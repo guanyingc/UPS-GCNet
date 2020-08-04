@@ -24,10 +24,8 @@ def convert_mid_intens(l_ints, opt):
     _, idx = l_ints.data.max(1)
     ints = eval_utils.class_to_light_ints(idx, opt['ints_cls'])
     ints = ints.view(-1, 1).repeat(1, 3)
-    #ints = torch.cat(torch.split(ints, ints.shape[0] // img_num, 0), 1)
     return ints
 
-# Classification
 class FeatExtractor(nn.Module):
     def __init__(self, opt, c_in=4, c_out=256):
         super(FeatExtractor, self).__init__()

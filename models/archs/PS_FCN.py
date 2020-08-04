@@ -52,12 +52,10 @@ class PS_FCN(nn.Module):
     def __init__(self, opt, c_in):
         super(PS_FCN, self).__init__()
         self.opt = opt
-        #c_in = 6
         self.extractor = FeatExtractor(self.opt, c_in=c_in, c_out=128)
         self.regressor = Regressor(self.opt, c_in=128)
 
     def forward(self, inputs):
-        #inputs = self.prepare_inputs(x)
         feats = torch.Tensor()
         for i in range(len(inputs)):
             feat, shape = self.extractor(inputs[i])

@@ -21,7 +21,6 @@ def plot_light(x, y, save_name, c=None):
     if c is None:
         ax.scatter(x, y, s=6) 
     else:
-        #c = np.linspace(0,1, 96)
         plt.scatter(x, y, c=c, cmap='jet', vmin=0, vmax=1)
     draw_circle(ax)
 

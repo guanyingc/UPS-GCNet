@@ -26,7 +26,7 @@ class LModel(BaseModel):
         self.L_Net = self.import_network(args.L_Net_name)(opt, c_in)
         self.L_Net = model_utils.init_net(self.L_Net, gpu_ids=args.gpu_ids)
 
-        if self.is_train: # Criterion
+        if self.is_train:
             self.dir_crit = model_utils.DirectionCrit(opt, log) 
             self.int_crit = model_utils.IntensityCrit(opt, log)
             self.optimizer = torch.optim.Adam(self.L_Net.parameters(), lr=args.init_lr, betas=(args.beta_1, args.beta_2))

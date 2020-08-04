@@ -46,7 +46,6 @@ def convert_intens(l_ints, opt, ints_step):
     ints = ints.view(-1, 1).repeat(1, 3)
     return ints
 
-# Classification
 class FeatExtractor(nn.Module):
     def __init__(self, opt, c_in=4, c_out=256):
         super(FeatExtractor, self).__init__()
