@@ -1,0 +1,233 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}	
+h1 {
+    font-weight:300;
+}
+
+.disclaimerbox {
+    background-color: #eee;		
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+}
+
+video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+}
+
+img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+}
+
+img.rounded {
+    border: 0px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+}
+
+a:link,a:visited
+{
+    color: #1367a7;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+      height: 160px;
+      text-align: center;
+      font-size: 22px;
+  }
+
+  .vert-cent {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+
+<html>
+<head>
+<title></title>
+<!--<meta property="og:image" content="https://github.com/guanyingc/PS-FCN/blob/gh-pages/files/ECCV2018_PS-FCN.png"/> TODO-->
+<meta property="og:title" content="What is Learned in Deep Uncalibrated Photometric Stereo?, In ECCV 2020." />
+</head>
+
+<body>
+<br>
+<center>
+    <span style="font-size:42px">What is Learned in Deep Uncalibrated Photometric Stereo?</span><br>
+    <table align=center width=900px>
+        <tr>
+            <td align=center width=900px>
+                <span style="font-size:22px"><a href="https://guanyingc.github.io">Guanying Chen<sup>1</sup></a></span> &emsp;&emsp;&emsp;
+                <span style="font-size:22px"><a href="https://sites.google.com/view/mwaechter">Michael Waechter<sup>2</sup></a></span> &emsp;&emsp;&emsp;
+                <span style="font-size:22px"><a href="http://ci.idm.pku.edu.cn/">Boxin Shi<sup>3,4</sup></a></span>
+                <!--<span style="font-size:22px"><a href="http://alumni.media.mit.edu/~shiboxin/">Boxin Shi<sup>3,4</sup></a></span>-->
+                <br>
+                <span style="font-size:22px"><a href="http://www-infobiz.ist.osaka-u.ac.jp/en/member/matsushita/">Yasuyuki Matsushita<sup>2</sup></a></span> &emsp;&emsp;&emsp;
+                <span style="font-size:22px"><a href="http://i.cs.hku.hk/~kykwong/">Kwan-Yee K. Wong<sup>1</sup></a></span>
+            </td>
+        </tr>
+    </table>
+    <table align=center width=800px>
+        <td align=center width=300px>
+            <span style="font-size:21px"><sup>1</sup>The University of Hong Kong &emsp;&emsp;&emsp; <sup>2</sup>Osaka University</span> <br>
+            <span style="font-size:21px"><sup>3</sup>Peking University &emsp; <sup>4</sup>Peng Cheng Laboratory</span>
+        </td>
+    </table>
+    <br>
+    <table align=center width=900px>
+        <tr>
+            <td align=center width=900px>
+                <center>
+                    <span style="font-size:22px"><a href="">Code [Comming Soon]</a></span> &emsp; &emsp;
+                    <!--<span style="font-size:22px"><a href="https://github.com/guanyingc/UPS-GCNet">Code [PyTorch]</a></span> &emsp; &emsp;-->
+                    <span style="font-size:22px"><a href="">Paper [ECCV 2020]</a> </span> &emsp; &emsp;
+                    <span style="font-size:22px"><a href="">Supplementary [PDF]</a> </span>  &emsp; &emsp;
+                    <!--<span style="font-size:22px"><a href=""> Poster [LaTex]</a></span>-->
+                </center>
+            </td>
+        </tr>
+    </table>
+</center>
+<br>
+
+<table align=center width=1000px>
+    <tr>
+        <td align=center width=1000px>
+            <img class="round" style="height:150px" src = "./files/ball_img.gif">
+            <span style="padding-left:50px">
+            <!--<img style="height:150px" src='' alt='' class=''>-->
+            <img class="round" style="height:150px" src = "./files/shadow.gif">
+            <img class="round" style="height:150px" src = "./files/shading.gif">
+            <img class="round" style="height:150px" src = "./files/specular.gif"> 
+            <br>
+            <img class="round" style="height:150px" src = "./files/Normal_gt.png">
+            <span style="padding-left:50px">
+            <img class="round" style="height:150px" src = "./files/feat/shadow.gif">
+            <img class="round" style="height:150px" src = "./files/feat/shading.gif">
+            <img class="round" style="height:150px" src = "./files/feat/specular.gif">
+        </td>
+    </tr> 
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1>Abstract</h1></center>
+    <p>
+    This paper targets at discovering what a deep uncalibrated photometric stereo network learns to resolve the problem’s inherent ambiguity, and designing an effective network architecture based on the new insight to improve the performance. The recently proposed deep uncalibrated photometric stereo method achieved promising results in estimating directional lightings. However, what specifically inside the network contributes to its success remains a mystery. In this paper, we analyze the features learned by this method and find that they strikingly resemble attached shadows, shadings, and specular highlights, which are known to provide useful clues in resolving the generalized bas-relief (GBR) ambiguity. Based on this insight, we propose a guided calibration network, named GCNet, that explicitly leverages object shape and shading information for improved lighting estimation. Experiments on synthetic and real datasets show that GCNet achieves improved results in lighting estimation for photometric stereo, which echoes the findings of our analysis. We further demonstrate that GCNet can be directly integrated with existing calibrated methods to achieve improved results on surface normal estimation.
+    </p>
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1>Introduction Talk (Video)</h1></center>
+
+    <center><iframe width="800" height="450" src="https://www.youtube.com/embed/9eMhirg7m78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    <br>
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1>Feature Visualization of LCNet (Video)</h1></center>
+    <center><iframe width="800" height="450" src="https://www.youtube.com/embed/HBWodF3LQBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+    <br>
+</table>
+<hr>
+
+<table align=center>
+    <center><h1>Method</h1></center>
+    <tr>
+        <td align=center width=1000px>
+            <img class="round" style="width:1000px" src="./files/UPS-GCNet.jpg"/></img>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <p><br>
+        Structure of (a) the lighting estimation sub-network L-Net, (b) the normal estimation sub-network N-Net, and (c) the entire GCNet. Values in layers indicate the output channel number.
+        </p>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table align=center width=1000px>
+    <center><h1>Lighting Estimation Results on Real Dataset</h1></center>
+    <center><h2>1. DiLiGenT Main Dataset</h2></center>
+    <table align=center width=1000px>
+        <tr> <td align=center>
+                <img class="round" style="width:900px" src="./files/res_diligent_main.png"/>
+        </td> </tr>
+    </table>
+    <center><h2>2. DiLiGenT Test Dataset</h2></center>
+    <table align=center width=1000px>
+        <tr> <td align=center>
+                <img class="round" style="width:900px" src="./files/res_diligent_test.png"/>
+        </td> </tr>
+    </table>
+    <center><h2>3. Light Stage Data Gallery</h2></center>
+    <table align=center width=1000px>
+        <tr> <td align=center>
+                <img class="round" style="width:900px" src="./files/res_lightstage1.png"/>
+                <img class="round" style="width:850px" src="./files/res_lightstage2.png"/>
+        </td> </tr>
+    </table>
+    </table>
+
+<br>
+<hr>
+<center>
+    <center><h1>Code and Model</h1></center>
+    <h3>Code and models are available at <a href="https://github.com/guanyingc/UPS-GCNet">Github!</a></h2>
+    <!--<h3>Our code and trained model will be made publicly available before June 2019! !</h3>-->
+</center>
+<hr>
+
+<table align=center width=1000px>
+    <tr>
+        <td width=400px>
+            <left>
+            <center><h1>Acknowledgments</h1></center>
+        Michael Waechter was supported through a JSPS Postdoctoral Fellowship (JP17F17350). Boxin Shi is supported by the National Natural Science Foundation of China under Grant No. 61872012, National Key R\&D Program of China (2019YFF0302902), and Beijing Academy of Artificial Intelligence (BAAI). Kwan-Yee K. Wong is supported by the Research Grant Council of Hong Kong (SAR), China, under the project HKU 17203119. Yasuyuki Matsushita is supported by JSPS KAKENHI Grant Number JP19H01123.
+            </left>
+        </td>
+    </tr>
+</table>
+<br>
+
+<p style="text-align:center;font-size:16px;">
+    Webpage template borrowed from <a href="https://richzhang.github.io/splitbrainauto/">Split-Brain Autoencoders, CVPR 2017</a>.
+</p>
+</body>
+</html>
