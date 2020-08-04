@@ -1,0 +1,7 @@
+cat
+frog
+hippo
+lizard
+pig
+scholar
+turtle
