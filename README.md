@@ -1,6 +1,6 @@
 # UPS-GCNet
 
-**[What is Learned in Deep Uncalibrated Photometric Stereo? (ECCV 2020)](http://guanyingc.github.io/UPS-GCNet/)**.
+**[What is Learned in Deep Uncalibrated Photometric Stereo? (ECCV 2020)](http://guanyingc.github.io/UPS-GCNet/)**
 <br>
 [Guanying Chen](https://guanyingc.github.io), [Michael Waechter](https://sites.google.com/view/mwaechter), [Boxin Shi](http://ci.idm.pku.edu.cn/), [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/), [Yasuyuki Matsushita](http://www-infobiz.ist.osaka-u.ac.jp/en/member/matsushita/)
 <br>
@@ -23,7 +23,7 @@ We provide:
   * [Test GCNet on Harvard photometric stereo dataset](#test-gcnet-on-harvard-photometric-stereo-dataset)
   * [Test GCNet on synthetic data](#test-gcnet-on-synthetic-data)
   * [Test LCNet on the above datasets](#test-lcnet-on-the-above-datasets)
-* [Code Structure](#code-structure)
+* [Code structure](#code-structure)
 * [Training](#training)
 * [Acknowledgement](#acknowledgement)
 * [Citation](#citation)
@@ -170,7 +170,7 @@ python run_model.py --gpu_ids 0 --model L_model --L_Net_name LCNet --L_Net_check
     --benchmark XXXXX --bm_dir XXXX
 ```
 
-## Code Structure
+## Code structure
 - We use `models/xxx_model.py` (e.g., `L_model.py`, `GCNet_model.py`) to control the forward, backward, and visualization procedures. `xxx_model.py` will initialize specific network(s) for training and testing. Network architectures are placed in `models/archs/`.
 ```
 ├── main.py
