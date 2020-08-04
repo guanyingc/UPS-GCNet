@@ -2,14 +2,14 @@
 
 **[What is Learned in Deep Uncalibrated Photometric Stereo? (ECCV 2020)](http://guanyingc.github.io/UPS-GCNet/)**.
 <br>
-[Guanying Chen](https://guanyingc.github.io), [Michael Waechter](https://sites.google.com/view/mwaechter), [Boxin Shi](http://alumni.media.mit.edu/~shiboxin/), [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/), [Yasuyuki Matsushita](http://www-infobiz.ist.osaka-u.ac.jp/en/member/matsushita/)
+[Guanying Chen](https://guanyingc.github.io), [Michael Waechter](https://sites.google.com/view/mwaechter), [Boxin Shi](http://ci.idm.pku.edu.cn/), [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/), [Yasuyuki Matsushita](http://www-infobiz.ist.osaka-u.ac.jp/en/member/matsushita/)
 <br>
 
 This paper targets at discovering what a deep uncalibrated photometric stereo (UPS) network learns to resolve the problem's inherent ambiguity, and introduce a guided cailbration network (GCNet) based on our analysis.
 
 ## Overview:
 We provide:
-- Code to test on [DiLiGenT dataset](https://sites.google.com/site/photometricstereodata/single), [Light Stage Data Gallery](https://vgl.ict.usc.edudata/LightStage/), [Gourd&Apple dataset](http://vision.ucsd.edu/~nalldrin/research/), [photometric stereo  Harvard dataset](http://vision.seas.harvard.edu/qsfs/Data.html), and synthetic datasets.
+- Code to test our method on [DiLiGenT dataset](https://sites.google.com/site/photometricstereodata/single), [Light Stage Data Gallery](https://vgl.ict.usc.edudata/LightStage/), [Gourd&Apple dataset](http://vision.ucsd.edu/~nalldrin/research/), [Harvard photometric stereo dataset](http://vision.seas.harvard.edu/qsfs/Data.html), and synthetic datasets.
 - Full code to train a new model, including codes for debugging, visualization and logging.
 
 ## Table of Contents
