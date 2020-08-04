@@ -2,7 +2,7 @@
 
 **[What is Learned in Deep Uncalibrated Photometric Stereo? (ECCV 2020)](http://guanyingc.github.io/UPS-GCNet/)**.
 <br>
-[Guanying Chen](https://guanyingc.github.io), [Michael Waechter](https://sites.google.com/view/mwaechter), [Boxin Shi](http://alumni.media.mit.edu/~shiboxin/), [Yasuyuki Matsushita](http://www-infobiz.ist.osaka-u.ac.jp/en/member/matsushita/), [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/)
+[Guanying Chen](https://guanyingc.github.io), [Michael Waechter](https://sites.google.com/view/mwaechter), [Boxin Shi](http://alumni.media.mit.edu/~shiboxin/), [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/), [Yasuyuki Matsushita](http://www-infobiz.ist.osaka-u.ac.jp/en/member/matsushita/)
 <br>
 
 This paper targets at discovering what a deep uncalibrated photometric stereo (UPS) network learns to resolve the problem's inherent ambiguity, and introduce a guided cailbration network (GCNet) based on our analysis.
