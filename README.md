@@ -56,7 +56,7 @@ bash scripts/download_pretrained_models.sh
 # Pretrained models can be found in data/models_ECCV2020/
 ```
 
-The trained models can also be downloaded in Google Drive ([models_release/](https://drive.google.com/drive/folders/19_GYdF2_kPUqmGxdRDkRCT7smokjiE3Z?usp=sharing)).
+The trained models can also be downloaded in One Drive ([models_release/](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/u3004356_connect_hku_hk/EphJAYz2rLhNh0hHoudYyHwB65zh-HtJ7mmtGRnXmnWK7w?e=e9yjyH)).
 
 #### Test GCNet on the DiLiGenT main dataset
 <p align="center">
@@ -87,7 +87,7 @@ python run_model.py --gpu_ids 0 --model GCNet_N_model --GCNet_name GCNet --GCNet
 </p>
 
 This dataset can be downloaded in [https://vgl.ict.usc.edudata/LightStage/](https://vgl.ict.usc.edudata/LightStage/). For easier testing, we have downloaded and converted this dataset to numpy arrays. As we used 133 images for each object, the dimension of numpy array for each object is `HxWx(133x3)`. 
-The processed numpy array can be download in Google Drive ([LightStage_Numpy_Data.tgz](https://drive.google.com/drive/folders/19_GYdF2_kPUqmGxdRDkRCT7smokjiE3Z?usp=sharing)).
+The processed numpy array can be download in One Drive (LightStage_Numpy_Data.tgz).
 You can get access to individual image from the numpy array by the following code snippet.
 ```python
 import numpy as np
@@ -112,7 +112,7 @@ python run_model.py --gpu_ids 0 --model GCNet_N_model --GCNet_name GCNet --GCNet
     <img src='images/gourd_apple/gourd2.jpg' height="100">
 </p>
 
-This dataset can be downloaded in [http://vision.ucsd.edu/~nalldrin/research/](http://vision.ucsd.edu/~nalldrin/research/). Similarly, we converted this dataset to numpy array for eaiser testing. The processed numpy array can be download in Google Drive ([Gourd_Apple_Numpy_Data.tgz](https://drive.google.com/drive/folders/19_GYdF2_kPUqmGxdRDkRCT7smokjiE3Z?usp=sharing)). 
+This dataset can be downloaded in [http://vision.ucsd.edu/~nalldrin/research/](http://vision.ucsd.edu/~nalldrin/research/). Similarly, we converted this dataset to numpy array for eaiser testing. The processed numpy array can be download in One Drive (Gourd_Apple_Numpy_Data.tgz). 
 The python script for data conversion can be found in [scripts/convert_gourd_apple_to_numpy.py](scripts/convert_gourd_apple_to_numpy.py).
 Please download, unzip, and place this dataset in `data/datasets/`.
 
@@ -143,7 +143,7 @@ python run_model.py --gpu_ids 0 --model GCNet_model --GCNet_name GCNet --GCNet_c
 ```
 
 #### Test GCNet on synthetic data
-We provide the rendered synthetic Dragon and Armadillo for testing. This dataset was rendered with 100 MERL BRDFs under 100 light directions using [mitsuba](https://www.mitsuba-renderer.org/). We saved the rendered synthetic dataset in 16 bit EXR file (we have also saved the 8 bit PNG images). Library `OpenEXR` is required to load the data. This dataste can be downloaded in Google Drive ([PS_Synth_MERL_Test_ECCV2020.tgz](https://drive.google.com/drive/folders/19_GYdF2_kPUqmGxdRDkRCT7smokjiE3Z?usp=sharing)).
+We provide the rendered synthetic Dragon and Armadillo for testing. This dataset was rendered with 100 MERL BRDFs under 100 light directions using [mitsuba](https://www.mitsuba-renderer.org/). We saved the rendered synthetic dataset in 16 bit EXR file (we have also saved the 8 bit PNG images). Library `OpenEXR` is required to load the data. This dataste can be downloaded in One Drive (PS_Synth_MERL_Test_ECCV2020.tgz).
 ```shell
 sudo apt-get install libopenexr-dev # For Ubuntu
 pip install OpenEXR 
