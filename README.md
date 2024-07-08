@@ -230,7 +230,7 @@ If you find this code or the provided models useful in your research, please con
 ```
 @article{chen2020_gcnet,
   title={What is Learned in Deep Uncalibrated Photometric Stereo?},
-  author={Chen, Guanying and Waechter Michael and Shi, Boxin and Wong, Kwan-Yee K. and Matsushita, Yasuyuki},
+  author={Chen, Guanying and Waechter Michael and Shi, Boxin and Wong, Kwan-Yee~K. and Matsushita, Yasuyuki},
   journal={ECCV},
   year={2020},
 }
